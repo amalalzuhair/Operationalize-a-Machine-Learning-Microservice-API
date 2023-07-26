@@ -8,7 +8,7 @@ You are given a pre-trained, `sklearn` model that has been trained to predict ho
 
 ### How to run the project
 
-* 1. Setup the Environment:
+1. Setup the Environment:
 
 * Create a virtualenv with Python 3.7 and activate it:
 ```bash
@@ -19,13 +19,13 @@ python3 -m pip install --user virtualenv
 python3 -m virtualenv --python=<path-to-Python3.7> .devops
 source .devops/bin/activate
 ```
-* 2. Run `make install` to install the necessary dependencies
+2. Run `make install` to install the necessary dependencies
 
-* 3. Run docker container `./run_docker.sh`
+3. Run docker container `./run_docker.sh`
 
-* 4. Upload to docker hub `./upload_docker.sh`
+4. Upload to docker hub `./upload_docker.sh`
 
-* 5. Deploy in Kubernetes  `./run_kubernetes.sh`
+5. Deploy in Kubernetes  `./run_kubernetes.sh`
 
 ## Files Structure: 
 * App.py: Python application file that contains a pre-trained, sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. 
