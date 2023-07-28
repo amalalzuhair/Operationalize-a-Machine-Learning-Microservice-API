@@ -4,7 +4,7 @@ import logging
 
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-from sklearn.externals import joblib
+import joblib
 
 
 app = Flask(__name__)
