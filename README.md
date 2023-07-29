@@ -4,28 +4,43 @@
 
 In this project I have used a pre-trained `sklearn` model that has been trained to predict housing prices in Boston according to several features. I used docker technology to containerize the application. And I used Kubernetes technology as a cluster provider for my containerized application. This project is in collaboration with Udacity nanodegree for Cloud DevOps Engineer program. 
 
-### How to run the project
+## Project Motivation: 
+To practice operationizing Machine learning models using Docker, Kubernetes and other technologies taught in the "Microservices at scale, using AWS and Kubernetes" Course in Udacity nanodegree for Cloud DevOps Engineer program.
 
-1. Setup the Environment:
+### Tech Stack: 
+* Python
+* Flask
+* Kubernetes
+* Docker
+* Pylint
+* Hadolint
+* CircleCI
 
-* Create a virtualenv with Python 3.7 and activate it:
+# Setup the Environment:
+
+1. Create a virtualenv with Python 3.7 and activate it:
 ```bash
 python3 -m pip install --user virtualenv
-# You should have Python 3.7 available in your host. 
-# Check the Python path using `which python3`
-# Use a command similar to this one:
 python3 -m virtualenv --python=<path-to-Python3.7> .devops
 source .devops/bin/activate
 ```
 2. Run `make install` to install the necessary dependencies
 
-3. Run docker container `./run_docker.sh`
+3. Run `make lint` to check for linting errors
 
-4. Make predicition using `./make_prediction.sh`
+# Run in Docker container
 
-4. Upload to docker hub `./upload_docker.sh`
+1. Run docker container `./run_docker.sh`
+2. Make predicition using `./make_prediction.sh`
+3. Upload to docker hub `./upload_docker.sh`
 
-5. Deploy in Kubernetes  `./run_kubernetes.sh`
+# Run in Kubernetes Cluster
+
+1. Install minikube and virtualbox
+2. run minikube start to start a local cluster 
+3. Run `./run_kubernetes.sh` to start the kubernetes pod and create the flask app in the container.
+4. Run `./make_prediction.sh` to make predictions
+
 
 ## Files Structure: 
 * App.py: Python application file that contains a pre-trained, sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. 
