@@ -29,7 +29,7 @@ source .devops/bin/activate
 3. Run `make lint` to check for linting errors
 
 # Run in Docker container
-
+* Make sure you install docker following these instructions: https://docs.docker.com/get-docker/
 1. Run docker container `./run_docker.sh`
 2. Make predicition using `./make_prediction.sh`
 3. Upload to docker hub `./upload_docker.sh`
@@ -37,7 +37,7 @@ source .devops/bin/activate
 # Run in Kubernetes Cluster
 
 1. Install minikube and virtualbox
-2. run minikube start to start a local cluster 
+2. run `minikube start` to start a local cluster 
 3. Run `./run_kubernetes.sh` to start the kubernetes pod and create the flask app in the container.
 4. Run `./make_prediction.sh` to make predictions
 
